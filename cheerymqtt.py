@@ -44,7 +44,7 @@ def on_connect(client, userdata, rc):
     client.subscribe(MQTT_HEX_TOPIC)
 
 def on_message(client, userdata, msg):
-	print(msg.topic+" "+str(msg.payload))
+	print(msg.topic+" "+msg.payload.decode(encoding='UTF-8'))
 
 def main():
     client = mqtt.Client()
