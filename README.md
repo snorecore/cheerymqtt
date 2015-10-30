@@ -8,4 +8,4 @@ on iot.eclipse.org, but you should probably change this to something
 else. The connection code isn't very robust, and if the code can't get
 the colour it'll default to black.
 
-Requires paho-mqtt and request packages.
+Requires paho-mqtt and requests packages.
