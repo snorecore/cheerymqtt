@@ -64,11 +64,11 @@ def main():
             next_hex = get_hex()
 
             if next_name != last_name:
-                client.publish(MQTT_NAME_TOPIC, next_name)
+                client.publish(MQTT_NAME_TOPIC, next_name, retain=True)
                 last_name = next_name
 
             if next_hex != last_hex:
-                client.publish(MQTT_HEX_TOPIC, next_hex)
+                client.publish(MQTT_HEX_TOPIC, next_hex, retain=True)
                 last_hex = next_hex
             check_time = time.time()
 
